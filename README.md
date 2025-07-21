@@ -1,2 +1,2 @@
-# app-projeto
+# Projeto: CI/CD com GitHub Actions
 
