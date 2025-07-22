@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Projeto actions da compass concluído com sucesso."}
+    return {"message": "Testando o texto mudando no app"}
