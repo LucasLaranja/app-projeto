@@ -29,12 +29,12 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ github.sha }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/app-projeto:${{ github.sha }}
 
     - name: Clone manifests repository
       uses: actions/checkout@v3
       with:
-        repository: your-username/hello-manifests
+        repository: LucasLaranja/manifests-Kubernetes
         path: manifests
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
