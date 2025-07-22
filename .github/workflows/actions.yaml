@@ -40,7 +40,7 @@ jobs:
 
     - name: Update image tag in deployment manifest
       run: |
-        sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/hello-app:${{ github.sha }}|g" manifests/deployment.yaml
+        sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/app-projeto:${{ github.sha }}|g" manifests/deployment.yaml
 
     - name: Commit and push updated manifests
       run: |
