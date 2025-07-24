@@ -1,15 +1,15 @@
-# Projeto: CI/CD com GitHub Actions
+# 🎯Projeto: CI/CD com GitHub Actions
 
 GitHub Actions e ArgoCD são ferramentas essenciais no CI/CD moderno, automatizando deploys e infraestrutura via Git. Dominar essas práticas é crucial para profissionais de DevOps, SRE, Cloud e desenvolvimento ágil. E por isso foi feito esse projeto visando o aprendizado.
 
-- [Objetivo](#objetivo)
-- [Pré-requisitos](#pré-requisitos)
-1. [Criar a aplicação FastAPI](#1-criar-a-aplicação-fastapi)
-2. [Criar o GitHub Actions (CI/CD)](#2-criar-o-github-actions-cicd)
-3. [Repositório Git com os manifests do ArgoCD](#3-repositório-git-com-os-manifests-do-argocd)
-4. [Criar o App no ArgoCD](#4-criar-o-app-no-argocd)
-5. [Acessar e testar a aplicação localmente](#5-acessar-e-testar-a-aplicação-localmente)
-6. [Conclusão e evidências finais](#6-conclusão-e-evidências-finais)
+- ✅[Objetivo](#objetivo)
+- ⚙️[Pré-requisitos](#️pré-requisitos)
+1. ⚡[Criar a aplicação FastAPI](#1-criar-a-aplicação-fastapi)
+2. 🐙[Criar o GitHub Actions (CI/CD)](#2-criar-o-github-actions-cicd)
+3. 📄[Repositório Git com os manifests do ArgoCD](#3-repositório-git-com-os-manifests-do-argocd)
+4. 🧩[Criar o App no ArgoCD](#4-criar-o-app-no-argocd)
+5. 🧪[Acessar e testar a aplicação localmente](#5-acessar-e-testar-a-aplicação-localmente)
+6. 📈[Conclusão e entregas finais](#6-conclusão-e-entregas-finais)
 
 ---
 
@@ -22,7 +22,7 @@ Kubernetes local com Rancher Desktop.
 
 ---
 
-## Pré-requisitos
+## ⚙️Pré-requisitos
 
 * Conta no GitHub (repo público) 
 * Conta no Docker Hub com token de acesso  
@@ -34,7 +34,7 @@ Kubernetes local com Rancher Desktop.
 
 ---
 
-## 1. Criar a aplicação FastAPI
+## 1. ⚡Criar a aplicação FastAPI
 
 Nosso primeiro passo é a criação do nosso repositório, no caso esse repo em que estamos. E logo após, criamos a nossa aplicação main.py:
 ```
@@ -69,7 +69,7 @@ Nosso Dockerfile empacota a aplicação, tornando-a portável e pronta para roda
 
 ---
 
-## 2. Criar o GitHub Actions (CI/CD)
+## 2. 🐙Criar o GitHub Actions (CI/CD)
 
 Agora vamos para a criação do nosso yaml, crie uma pasta chamada .github no repositório, e outra dentro da mesma, chama workflows, e dentro delas nosso yaml, **isso será importante para usar o github actions**. Agora vamos editar nosso yaml:
 
@@ -154,7 +154,7 @@ Agora vamos no actions ver como está e em seguida vamos ver no Dockerhub:
 
 ---
 
-## 3. Repositório Git com os manifests do ArgoCD
+## 3. 📄Repositório Git com os manifests do ArgoCD
 
 Lembra do nosso outro repositório, então vamos usá-lo nessa etapa. Criaremos dois yaml nele, sendo um o deployment e outro o service:
 
@@ -204,7 +204,7 @@ spec:
 
 * Esse repositório será usado pelo ArgoCD para sincronizar o deploy.
 
-## 4. Criar o App no ArgoCD
+## 4. 🧩Criar o App no ArgoCD
 
 Agora vamos utilizar nosso ArgoCD:
 
@@ -246,7 +246,7 @@ Clique em create e aguarde terminar de sincronizar:
 
 ---
 
-## 5. Acessar e testar a aplicação localmente
+## 5. 🧪Acessar e testar a aplicação localmente
 
 Agora vamos ver a aplicação, para olharmos seu funcionamento utilizaremos o port-foward:
 
@@ -272,7 +272,7 @@ E atualizando o site:
 
 ---
 
-## 6. Conclusão e evidências finais
+## 6. 📈Conclusão e entregas finais
 
 Algumas entregas não foram integradas acima e serão mostradas agora:
 
