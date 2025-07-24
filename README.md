@@ -9,6 +9,7 @@ GitHub Actions e ArgoCD são ferramentas essenciais no CI/CD moderno, automatiza
 3. [Repositório Git com os manifests do ArgoCD](#3-repositório-git-com-os-manifests-do-argocd)
 4. [Criar o App no ArgoCD](#4-criar-o-app-no-argocd)
 5. [Acessar e testar a aplicação localmente](#5-acessar-e-testar-a-aplicação-localmente)
+6. [Conclusão e evidências finais](#6-conclusão-e-evidências-finais)
 
 ---
 
@@ -246,3 +247,52 @@ Clique em create e aguarde terminar de sincronizar:
 ---
 
 ## 5. Acessar e testar a aplicação localmente
+
+Agora vamos ver a aplicação, para olharmos seu funcionamento utilizaremos o port-foward:
+
+![16](/Prints/16.png)
+
+```
+kubectl port-forward svc/{nome da sua aplicação} 8080:80
+```
+
+* No meu caso eu utilizei a 8081 por a outra estar cheia.
+
+Agora vamos ver:
+
+![17](/Prints/17.png)
+
+Para testarmos o CI/CD, vamos mudar o nome na aplicação main.py:
+
+![18](/Prints/18.png)
+
+E atualizando o site:
+
+![19](/Prints/19.png)
+
+---
+
+## 6. Conclusão e evidências finais
+
+Algumas entregas não foram integradas acima e serão mostradas agora:
+
+![20](/Prints/20.png)
+
+```
+kubectl get pods
+```
+
+![21](/Prints/21.png)
+
+* **build e push da imagem no Docker Hub**
+
+![22](/Prints/22.png)
+
+![23](/Prints/23.png)
+
+* **Atualização automática dos manifests com a nova tag 
+da imagem**
+
+![24](/Prints/24.png)
+
+### E chegamos ao final do projeto obtendo os resultados esperados, projeto teve como objetivo aprender mais sobre CI/CD e ter uma introdução ao tema, e com isso finalizamos o projeto. 
